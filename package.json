@@ -1,0 +1,29 @@
+{
+  "name": "appIDexample",
+  "version": "0.1.0",
+  "description": "Example application using ArcGIS Online application login",
+  "main": "server.js",
+  "dependencies": {
+    "JSON": "~1.0.0",
+    "request": "~2.31.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tedrick/appIDexample.git"
+  },
+  "keywords": [
+    "arcgis",
+    "online",
+    "node"
+  ],
+  "author": "James Tedrick",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/tedrick/appIDexample/issues"
+  }
+}
