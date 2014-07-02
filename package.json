@@ -5,7 +5,8 @@
   "main": "server.js",
   "dependencies": {
     "JSON": "~1.0.0",
-    "request": "~2.31.0"
+    "request": "~2.31.0",
+      "jade": "~1.3.1"
   },
   "devDependencies": {},
   "scripts": {

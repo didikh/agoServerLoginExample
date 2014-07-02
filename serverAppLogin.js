@@ -4,7 +4,7 @@
 if (process.argv[2] === undefined || process.argv[3] === undefined) {
     console.log('Missing paramter!');
     console.log('Usage:');
-    console.log('node server.js <APPID> <APPSECRET>');
+    console.log('node serverAppLogin.js <APPID> <APPSECRET>');
     process.exit(1);
 }
 var APPID = process.argv[2];
@@ -17,7 +17,9 @@ var http = require('http'),
 	url = require('url'),
 	qs = require('querystring'),
 	JSON = require('JSON'),
-	AGO = require('./AGOconnection.js').AGO(APPID, APPSECRET);
+	AGO = require('./AGOconnection.js')
+
+var APP = AGO.appLogin(APPID, APPSECRET);
 
 var reportError, checkJob, writeOut, createDataObject, consoleResponse, standardResponse, RESPONSE, multipleRequests, checkForErrors;
 
@@ -40,7 +42,7 @@ http.createServer(function (req, res) {
         the permissions of the application directly until token expiry
     */
 	case '/token':
-        writeOut(res, AGO.token, 'text');
+        writeOut(res, APP.token, 'text');
         break;
 	
     /*
@@ -49,12 +51,8 @@ http.createServer(function (req, res) {
     */
     case '/search':
         var q;
-        q = {
-            'f' : 'json',
-            'token' : AGO.token,
-            'q' : query.q
-        };
-        request({url: AGO.URLS.search, qs: q}, standardResponse);
+        q = createDataObject({'q' : query.q});
+        request({url: AGO.arcgisURLs.search, qs: q}, standardResponse);
         break;
     /*
         getItem - Get item information
@@ -62,9 +60,9 @@ http.createServer(function (req, res) {
     */
     case '/getItem':
         item = query.item || '8543d1c1386f47c3b2bdac110f6015e7';
-        data = {'f': 'json', 'token' : AGO.token};
+        data = createDataObject();
         thisReq = request({
-            'url' : AGO.portalURL + 'content/items/' + item,
+            'url' : AGO.arcgisURLs.portalURL + 'content/items/' + item,
             'qs' : data
         }, standardResponse);
         break;
@@ -75,9 +73,9 @@ http.createServer(function (req, res) {
     */
     case '/getData':
         item = query.item || '8543d1c1386f47c3b2bdac110f6015e7';
-        data = {'f': 'json', 'token' : AGO.token, 'where': '1=1', 'outFields': '*', 'returnGeometry': 'false'};
+        data = createDataObject({'where': '1=1', 'outFields': '*', 'returnGeometry': 'false'});
         thisReq = request({
-            'url' : AGO.portalURL + 'content/items/' + item,
+            'url' : AGO.arcgisURLs.portalURL + 'content/items/' + item,
             'qs' : data
         }, function (err, resp, body) {
             var itemObj;
@@ -95,7 +93,7 @@ http.createServer(function (req, res) {
 		var address;
 		address = query.address || '8615 Westwood Center Drive, Vienna, VA 22182';
         data = createDataObject({'text': address});
-		thisReq = request({'url' : AGO.URLS.geosearch, qs: data}, standardResponse);
+		thisReq = request({'url' : AGO.arcgisURLs.geosearch, qs: data}, standardResponse);
 		break;
     /*
         batchGeocode - Multiple address geocode
@@ -118,7 +116,7 @@ http.createServer(function (req, res) {
         }
         (JSON.stringify(addressObj));
         data = createDataObject({'addresses': JSON.stringify(addressObj)});
-        thisReq = request({'url' : AGO.URLS.geocode, qs: data}, standardResponse);
+        thisReq = request({'url' : AGO.arcgisURLs.geocode, qs: data}, standardResponse);
         break;
     /*
         route2 - generate a route between 2 addresses
@@ -131,20 +129,25 @@ http.createServer(function (req, res) {
         toAddress = query.to || '801 Mt. Vernon Place NW, Washington DC 20001';
         fromData = createDataObject({'text': fromAdddress});
         toData = createDataObject({'text': toAddress});
-        requestURLs = [AGO.URLS.geosearch, AGO.URLS.geosearch];
+        requestURLs = [AGO.arcgisURLs.geosearch, AGO.arcgisURLs.geosearch];
         requestData = [fromData, toData];
         multipleRequests(requestURLs, requestData, function (responses) {
-            var toRes, fromRes, toStop, fromStop, stops = [], data, e, errRes;
+            //var toRes, fromRes, toStop, fromStop, 
+            var removeThese = ['Score', 'Addr_Type'], stops = [], r, thisStop, thisRes, a, data, e, errRes;
             if (checkForErrors(responses)) {
-                toRes = JSON.parse(responses[0].body);
-                toStop = toRes.locations[0].feature;
-                toStop.attributes.name = toRes.locations[0].name;
-                fromRes = JSON.parse(responses[1].body);
-                fromStop = fromRes.locations[0].feature;
-                fromStop.attributes.name = fromRes.locations[0].name;
-                stops = [toStop, fromStop];
+                for (r = 0; r < responses.length; r++) {
+                    thisRes = JSON.parse(responses[r].body)
+                    thisStop = thisRes.locations[0].feature;
+                    thisStop.attributes.name = thisRes.locations[0].name;
+                    for (a = 0; a < removeThese.length; a++) {
+                        if(thisStop.attributes.hasOwnProperty(removeThese[a])) {
+                            delete thisStop.attributes[removeThese[a]];}
+                    }
+                    console.log(thisStop)
+                    stops.push(thisStop);
+                }
                 data = createDataObject({stops: JSON.stringify({features: stops})});
-                thisReq = request({'url': AGO.URLS.route, qs: data}, standardResponse);
+                thisReq = request({'url': AGO.arcgisURLs.route, qs: data}, standardResponse);
             } else {
                 for (e = 0; e < responses.length; e++) {
                     if (responses[e].error) {
@@ -192,12 +195,12 @@ http.createServer(function (req, res) {
 
         });
         thisReq = request({
-            url: AGO.URLS.serviceArea + '/submitJob',
+            url: AGO.arcgisURLs.serviceArea + '/submitJob',
             qs: data
         }, function (err, resp, body) {
             var thisJobInfo = JSON.parse(body);
             if (thisJobInfo.jobId) {
-                checkJob(AGO.URLS.serviceArea, thisJobInfo.jobId, res);
+                checkJob(AGO.arcgisURLs.serviceArea, thisJobInfo.jobId, res);
             } else {
                 writeOut(res, body, 'json');
             }
@@ -239,8 +242,9 @@ checkJob = function (taskURL, jobId, response) {
 
 // createDataObject - auto add token & json parameters
 createDataObject = function (obj) {
+    if (typeof(obj) === 'undefined') {obj = {};}
     obj.f = 'json';
-    obj.token = AGO.token;
+    obj.token = APP.token;
     return obj;
 };
 

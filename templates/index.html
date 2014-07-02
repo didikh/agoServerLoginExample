@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>User login</title>
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.9/js/esri/css/esri.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            // The locationPath logic below may look confusing but all its doing is 
+            // enabling us to load the api from a CDN and load local modules from the correct location. 
+            packages: [{
+                name: "application",
+                location: package_path + '/js'
+            }],
+            parseOnLoad: true
+        };
+    </script>
+
+    <script src="//js.arcgis.com/3.9/" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["esri/map"], function (Map) {
+
+            var myMap = new Map("map", {
+                center: [-56.049, 38.485],
+                zoom: 3,
+                basemap: "streets"
+            });
+        });
+
+        require(["dijit/form/Button", "dijit/form/TextBox", "dojo/dom", "dijit/registry", "dojo/domReady!"],
+            function (Button, TextBox, dom, registry) {
+                var agoURL, orgBox, loginButton
+                agoURL = dom.byId("arcgisURL")
+                orgBox = new TextBox({
+                    value: "www",
+                    'class': "orgID",
+                    intermediateChanges: true,
+                    onChange: function () {
+                        if (this.value !== 'www') agoURL.innerHTML = '.maps.arcgis.com'
+                    }
+                }, "orgBox").startup();
+                loginButton = new Button({
+                    label: "Login to ArcGIS Online Organization:",
+                    onClick: function () {
+                        var orgURL = "https://" + registry.byId('orgBox').value + agoURL.innerHTML;
+                        var oAuthPath = "/sharing/oauth2/authorize";
+                        var params = "client_id=zAPw1EhYp2NZFGT1&response_type=code&redirect_uri=http://jtedrick3.esri.com:7000/redirect.html";
+                        window.open(orgURL + oAuthPath + "?" + params, "_self");
+                    }
+                }, "login").startup();
+
+            })
+    </script>
+
+</head>
+
+<body class="claro">
+    <div id="topBar">
+        <div id="login"></div>
+        <div id="orgBox"></div><span id="arcgisURL">.arcgis.com</span>
+    </div>
+
+
+    <div class="container">
+        <div id="map" class="map">
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
