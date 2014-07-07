@@ -1,0 +1,156 @@
+/redirect.popup.html
+OAuth redirection for 
+redirect.jade
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/
+index.jade
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+username=tedrick
+/css/style.css
+css/style.css
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/
+index.jade
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+username=tedrick
+/css/style.css
+css/style.css
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/publish
+Recevied request from tedrick for:
+{ f: 'json',
+  extent: '{"xmin":-13619287.435914759,"ymin":4808223.368535461,"xmax":-13487204.25103801,"ymax":5033253.979806961,"spatialReference":{"wkid":102100,"latestWkid":3857}}' }
+adding item as feature collection
+/
+index.jade
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+undefined
+/css/style.css
+css/style.css
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+Item added - http://www.arcgis.com/home/item.html?id=47d7238168cc4122ac362469db5969bd
+/redirect.popup.html
+OAuth redirection for 
+redirect.jade
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/
+index.jade
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+username=tedrick_Africa
+/css/style.css
+css/style.css
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css',
+  'index.jade',
+  'js',
+  'redirect.jade',
+  'redirect.popup.jade' ]

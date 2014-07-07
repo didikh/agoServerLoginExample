@@ -1,0 +1,47 @@
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+undefined
+/source.html
+D:\GitHub\agoServerLoginExample\userLogin
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/redirect.popup.html
+OAuth redirection for 
+redirect.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+username=tedrick
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/publish
+Recevied request from tedrick for:
+{ f: 'json',
+  extent: '{"xmin":-11209992.304366643,"ymin":5307204.289180959,"xmax":-10847986.538408145,"ymax":5610506.417416458,"spatialReference":{"wkid":102100,"latestWkid":3857}}' }
+adding item as feature collection
+Item added - http://www.arcgis.com/home/item.html?id=33e7f5c646a94a88a0df621591ddf6d9

@@ -1,0 +1,68 @@
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+undefined
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+undefined
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+undefined
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/redirect.popup.html
+OAuth redirection for 
+redirect.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/redirect.popup.html
+OAuth redirection for 
+redirect.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]
+/redirect.popup.html
+OAuth redirection for 
+/redirect.popup.html
+OAuth redirection for 
+redirect.jade
+check for template
+[ 'css', 'index.jade', 'js', 'redirect.jade' ]

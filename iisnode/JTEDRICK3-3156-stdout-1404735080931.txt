@@ -1,0 +1,13 @@
+/
+index
+index.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/arcgis.min.css
+arcgis.min.css
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]

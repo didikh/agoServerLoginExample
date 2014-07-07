@@ -1,0 +1,88 @@
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js' ]
+/source.html
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+Fri Jul 04 2014 17:28:04 GMT-0400 (Eastern Daylight Time)
+4ykfiizoKqiFAqRz3Y4zecY6Yf2K0POKg2Ty5Vj-DW2_2Shr3BFJaEvB2vZdsR5xc0dyNYfb67EDSJ7TqdPWDxh8BnmbEHtwHAnpmx_hMjYY8y7b4X_-ahswLsbhlJWKFAWFlLGEj2ZN8YpTkntSAg..
+-------------------
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js' ]
+/source.html
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js' ]
+/source.html
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js' ]
+/source.html
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+/
+index.jade
+check for template
+[ 'css', 'index.jade', 'js' ]
+/source.html
+/css/style.css
+css/style.css
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/preinit.js
+js/preinit.js
+check for template
+[ 'css', 'index.jade', 'js' ]
+/js/index.js
+js/index.js
+check for template
+[ 'css', 'index.jade', 'js' ]

@@ -1,0 +1,33 @@
+doctype html
+
+html(lang="en")
+    head
+        style(type="text/css").
+            body{width:98%; height:100%;overflow:hidden}
+            #main{width:100%; height:700px;
+            overflow:scroll;padding-left:15px}
+            #fileList{float:right}
+        link(rel="stylesheet" type="text/css" href=globals.cssFile)
+        script(type="text/javascript").
+            function update() {
+                //Get the CSS file, if specified
+                var newSearchTerms = ["file="+document.getElementById("fileList").value]
+                var searchTerms = window.location.search.substr(1).split("&");
+                for(var s=0; s < searchTerms.length; s++) {
+                    if (searchTerms[s].indexOf("css=") === 0) {
+                        newSearchTerms.push(searchTerms[s]);
+                    }
+                }
+                window.location.search = "?" + newSearchTerms.join("&");
+            }
+    body
+        div#topBar
+            select#fileList(onchange="update()")
+                each fileItem in globals.fileList
+                    if fileItem == globals.selected
+                        option(selected="selected")= fileItem
+                    else
+                        option= fileItem
+        hr(width="100%")
+        div#main
+            pre#code!= globals.code
