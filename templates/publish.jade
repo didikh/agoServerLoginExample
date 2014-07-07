@@ -1,9 +1,10 @@
 doctype html
 html
     head
+        title Thank you for your order
+        
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
-        title Test Redirect
 
         link(rel="stylesheet" type="text/css" href="//js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css")
         link(rel="stylesheet" type="text/css" href="//js.arcgis.com/3.9/js/esri/css/esri.css")
@@ -11,16 +12,10 @@ html
 
         script(src="//js.arcgis.com/3.9/")
         script(src="js/preinit.js")
-        script(src="js/index.js")
+        script(src="js/map.js")
+        
     body.claro
         div#topBar
-            if globals.name !== ""
-                ="Hello " + globals.name + "- Select your area of interest"
-                div#drawButton
-                //div#submitButton
-            else
-                div#login
-                div#orgBox
-                span#arcgisURL .arcgis.com
-            
+            h3 
+                ="Thanks "+ globals.name +".  Your request is being processed and will appear in your ArcGIS Online account shortly."
         div#map

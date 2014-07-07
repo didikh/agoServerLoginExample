@@ -1,4 +1,0 @@
-/publish
-Recevied request from tedrick for:
-{ f: 'json',
-  extent: '{"xmin":-11117044.877971893,"ymin":5356123.987283459,"xmax":-10906690.176131144,"ymax":5605614.447606208,"spatialReference":{"wkid":102100,"latestWkid":3857}}' }

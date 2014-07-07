@@ -1,9 +1,0 @@
-Application has thrown an uncaught exception and is terminated:
-ReferenceError: filelist is not defined
-    at getSource (D:\GitHub\agoServerLoginExample\libs\requestUtils.js:147:23)
-    at Server.username (D:\GitHub\agoServerLoginExample\userLogin\server.js:104:18)
-    at Server.EventEmitter.emit (events.js:98:17)
-    at HTTPParser.parser.onIncoming (http.js:2076:12)
-    at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:120:23)
-    at Socket.socket.ondata (http.js:1966:22)
-    at Pipe.onread (net.js:525:27)
