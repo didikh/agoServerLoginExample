@@ -1,0 +1,32 @@
+body {
+    margin: 40px;
+    padding: 20px;
+    font-size: 14pt;
+    font-family: "Trebuchet MS";
+}
+.container {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #eee;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+#map {
+    width: 65%;
+    height: 450px;
+}
+#topBar {
+    width: 100%;
+}
+#rightBox {
+    position:absolute;
+    top: 61px;
+    right:0px;
+    width: 30%;
+    padding-left: 20px;
+    height: 500px;
+}
+#messages {
+    float:right;
+    text-align: right;
+}

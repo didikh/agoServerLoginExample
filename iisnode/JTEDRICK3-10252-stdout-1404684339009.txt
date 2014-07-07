@@ -1,0 +1,48 @@
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]
+/viewApp
+viewApp.jade
+check for template
+[ 'index.jade', 'viewApp.jade' ]

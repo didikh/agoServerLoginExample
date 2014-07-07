@@ -1,26 +1,25 @@
-doctype html
+doctype HTML
 html
     head
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
-        title Test Redirect
+        meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no")
+        title globals.title
+        link(rel="stylesheet" href="css/arcgis.min.css")
 
-        link(rel="stylesheet" type="text/css" href="//js.arcgis.com/3.9/js/dojo/dijit/themes/claro/claro.css")
-        link(rel="stylesheet" type="text/css" href="//js.arcgis.com/3.9/js/esri/css/esri.css")
-        link(rel="stylesheet" type="text/css" href="style.css")
+        //load Avenir from fonts.com  this is will only work on localhost, arcgis.com or esri.com domains
+        link(type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/4a60d16b-c9e4-404d-89d3-809adb97d65c.css")
 
-        script(src="//js.arcgis.com/3.9/")
-        script(src="js/preinit.js")
-        script(src="js/index.js")
-    body.claro
-        div#topBar
-            if globals.name !== ""
-                ="Hello " + globals.name + "- Select your area of interest"
-                div#drawButton
-                //div#submitButton
-            else
-                div#login
-                div#orgBox
-                span#arcgisURL .arcgis.com
-            
-        div#map
+    body.tundra
+        h2 OAuth Server Logins
+        Tech Workshop slides coming soon!
+        h3 Examples:
+        ul
+            li
+                a(href="appLogin/") Application Login
+                br
+                a(href="viewApp?app=appLogin") Demo view
+            li
+                a(href="userLogin/") User Login
+                br
+                a(href="viewApp?app=userLogin") Demo view

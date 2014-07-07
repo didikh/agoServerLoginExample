@@ -1,0 +1,20 @@
+Application has thrown an uncaught exception and is terminated:
+SyntaxError: templates/redirect.jade:6
+    4|         
+    5|         script(type="text/javascript") document.cookie="username=!{globals.username}";
+  > 6|             if globals.popup == true.
+    7|                 window.opener.location.reload();
+    8|                 window.close();
+    9|             else window.location.href="./";
+
+Unexpected token )
+    at Function (<anonymous>)
+    at assertExpression (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\lexer.js:30:3)
+    at Object.Lexer.conditional (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\lexer.js:495:11)
+    at Object.Lexer.next (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\lexer.js:859:15)
+    at Object.Lexer.lookahead (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\lexer.js:113:46)
+    at Parser.lookahead (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\parser.js:100:23)
+    at Parser.peek (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\parser.js:77:17)
+    at Parser.block (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\parser.js:685:30)
+    at Parser.tag (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\parser.js:800:26)
+    at Parser.parseTag (D:\GitHub\agoServerLoginExample\node_modules\jade\lib\parser.js:719:17)
