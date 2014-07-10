@@ -1,4 +1,0 @@
-//
-/
-check for template
-[ 'index.jade', 'viewApp.jade' ]
